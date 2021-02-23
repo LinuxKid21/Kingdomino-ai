@@ -81,6 +81,9 @@ CardSet CardSet::removeTopFour()
 
     CardSet topFour = CardSet(begin(), begin()+4);
     erase(begin(), begin()+4);
+
+    std::sort(topFour.begin(), topFour.end(), [](const Card & a, const Card & b){ return a.rank < b.rank; });
+
     return topFour;
 }
 

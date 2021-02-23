@@ -113,6 +113,9 @@ int main(int argc, const char **argv)
     Board board;
     board.setTile(1, 0, Tile{TileType::Grass, 1});
 
+    Board board2;
+    board2.setTile(-1, 0, Tile{TileType::Forest, 1});
+
     while (window.isOpen())
     {
         sf::Event event;
@@ -125,6 +128,8 @@ int main(int argc, const char **argv)
         window.clear();
 
         drawBoard(sf::Vector2f(100, 100), 150, board, window);
+        drawBoard(sf::Vector2f(100 + 150*5 + 20, 100), 50, board2, window);
+        drawText(sf::Vector2f(100 + 150*5 + 20, 100 + 50*5), "Other Player's Board", false, window);
 
         for(int i = 0;i < topCards.size(); i++)
         {
