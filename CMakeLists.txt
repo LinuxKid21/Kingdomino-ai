@@ -7,8 +7,16 @@ project(kingdomino-ai)
 set(SOURCES
     Source/Main.cpp
 
-    Source/TileSet.h
-    Source/TileSet.cpp
+    Source/Board.cpp
+    Source/Card.cpp
+    Source/CardSet.cpp
+    Source/Game.cpp
+
+    Source/Board.h
+    Source/Card.h
+    Source/CardSet.h
+    Source/Game.h
+    Source/Tile.h
 )
 
 add_executable(kingdomino-ai ${SOURCES})

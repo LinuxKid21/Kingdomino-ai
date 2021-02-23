@@ -1,15 +1,5 @@
 #pragma once
-
-enum class TileType
-{
-    Wheat, Forest, Water, Grass, Swamp, Mine
-};
-
-struct Tile
-{
-    TileType type;
-    int crowns;
-};
+#include "Tile.h"
 
 struct Card
 {
